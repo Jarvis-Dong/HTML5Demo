@@ -2,7 +2,7 @@
  * Created by jarvis-dong on 16/10/31.
  */
 
-var H5ConponentBase = function (name, cfg ){
+var H5ComponentBase = function (name, cfg ){
     var cfg =cfg || {};
     var id = ('h5_C_'+Math.random()).replace('.','_');
 
@@ -11,7 +11,7 @@ var H5ConponentBase = function (name, cfg ){
     var component = $('<div class="h5_component '+cls+'" id="'+id+'">')
 
     if(cfg.text){
-        component.text(cfg.text);
+        console.log(cfg.text);
     }
     cfg.width  && component.width(cfg.width/2);
     cfg.height && component.height(cfg.height/2);
