@@ -11,7 +11,13 @@ var H5ComponentPoint = function (name, cfg) {
         var per = (item[1]/base*100)+'%';
         console.log(per);
 
-        point.width('100%').height('100%');
+        point.width(per).height(per);
+        if(item[2]){
+            point.css('background-color',item[2]);
+        }
+        if(item[3] !== undefined &&item[4] !== undefined){
+            point.css('left',item[3]).css('top',item[4]);
+        }
         component.append(point);
     })
 
